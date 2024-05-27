@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://dekatutorial.github.io/17klikaku/SubsYT.js"></script>
+    <script>
+               function popupku() {
+    var body = document.querySelector("body");      
+    var pWm = document.createElement("a");
+    pWm.setAttribute("href", "https://instagram.com/abasfristr_");
+    pWm.setAttribute("style", "text-decoration: none; color: white; opacity: .5; position: fixed; bottom : 10px; left: 10px");
+    pWm.innerHTML = "FOR YOU : Khaitsa Azzhra Rahmadani";
+    body.appendChild(pWm);
+          }
+    </script>
+    <title>Khaitsa For You</title>
+  </head>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  overflow: hidden;
+  background: #3fbafe;
+}
+.preload {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preload p {
+  color: #fff;
+  animation: load 3s ease;
+  -webkit-animation: load 1s ease infinite;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.teks {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: white;
+  text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.479);
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  transform-origin: top left;
+}
+.teks:nth-child(5n) {
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+
+.teks:nth-child(5n + 1) {
+  background: radial-gradient(#fbc1cc, #fa99b2);
+}
+
+.teks:nth-child(5n + 2) {
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+
+.teks:nth-child(5n + 3) {
+  background: radial-gradient(#60ef94, #58d56f);
+}
+
+.teks:nth-child(5n + 4) {
+  background: radial-gradient(#f588d8, #c0a3e5);
+}
+.teks::after {
+  content: "👆🏻";
+  position: absolute;
+  bottom: 20px;
+}
+
+.panda {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: blueviolet; */
+}
+.panda p {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  background: white;
+  color: #373737;
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.panda img {
+  width: 230px;
+}
+
+.panda p::before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  background: white;
+  left: 10px;
+  bottom: -10px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.panda p::after {
+  content: "";
+  height: 20px;
+  width: 25px;
+  position: absolute;
+  background: #3fbafe;
+  left: 20px;
+  bottom: -13px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.luv {
+  position: relative;
+}
+.panda .luv i {
+  color: rgb(255, 0, 81);
+  font-size: 5em;
+  text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white;
+  margin-top: 40px;
+  animation: jj 0.8s ease-in-out infinite alternate;
+  cursor: pointer;
+  -webkit-animation: jj 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes jj {
+  to {
+    scale: 1.1;
+  }
+}
+.container-modal {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  overflow-y: scroll;
+  display: none;
+  opacity: 0;
+  transition: 1s ease all;
+}
+.bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  scale: 1.1;
+  background: #000000;
+  background-size: cover;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.modal {
+  transform: translateY(150px);
+  transition: 1s ease all;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  /* background: blueviolet; */
+}
+.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+.frame {
+  box-sizing: border-box;
+  background: white;
+  margin-bottom: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  width: 85vw;
+  max-width: 400px;
+  padding: 30px 15px 20px;
+  /* opacity: 0; */
+}
+.frame img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.frame p {
+  font-size: 1.4em;
+  font-weight: 600;
+  /* padding: 10px 0; */
+}
+.modal a {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  background: white;
+  color: #232323;
+  padding: 7px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.modal .kirimPesan {
+  padding-bottom: 100px;
+}
+
+/* Lope */
+
+.lope {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-around;
+}
+.lope span {
+  color: white;
+  position: relative;
+  margin-top: -40px;
+  animation: animate 5s linear infinite;
+  opacity: 0.3;
+  font-size: 25px;
+}
+.lope span i {
+  font-size: 30px;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(110vh) scale(1);
+  }
+}
+a {
+  z-index: 3;
+}
+.ucapan {
+  display: none;
+}
+marquee {
+  width: 100%;
+  background: blueviolet;
+}
+.p{
+  color: white;
+}
+  </style>
+  <body>
+    <script> popupku(); </script>
+    <div class="preload"><p>Loading dulu . . .</p></div>
+    <div class="ucapan">
+
+      <p>Klik aku</p>
+      <p>dengerin lagunya deh... enak banget kan?setiap denger lagu ini suka ke inget aku kamu dan jogja😁</p>
+      <p>Aku mau ngucapin terimakasi, uda mau jadi bagian dari aku,uda mau sabar,jangan menyerah soal kluarga kmu yh.... aku tau kmu kuat ko,kalo kamu ada apa apa disini ada aku ko,bole banget kmu butuh pundak aku,buat ngeringanin masalah kamu</p>
+      <p>Kamu itu cantik cha,kamu kuat ko,pesan aku jangan mengeluh dengan hal yg ngeberatin kamu yh sengku,,,🤗</p>
+      <p>terimasi karna kamu aku tau apa itu arti cinta,terimakasi untuk segala hal yg kamu berikan ke aku,ak leih banyk tau tentang cinta yg kamu berikan ke aku</p>
+      <p>aku beruntung banget bisa ketemu sama kmu, bisa nemuin sosok wanita yg istimewa,entah itu mau nerima semua dari segi kekurangan ak,ak bnyk kekurangan maapin ak dlu sering ngeluh sama kmu tapi smnjk hadirnya kamu,setiap aku ngeluh selalu kamu jadi obat dari semua rasa insecure aku,kamu inget itu kan?sekarang ak bebas dari semua rasa itu,dan sekarang ak lupa gimna cara insecure,terikasih yh cintaku,,,❤</p>
+      <p>smoga kita kedepannya bisa trus bgini yh,jangan pernah kapok wlaupun banyak badai yg kita lalui,ak cmn pengen mau sampe kapanpun kita jangan pernah asing yh,pengen gitu walaupun nanti kita bukan siapa siapa kita masi bisa saling sapa,masi bisa saling tersenyum walaupun nantinya keadaan kita bukan siapa siapa lagi,, 😊</p>
+
+    </div>
+    <script>
+
+      musik = "tulus.mp3";
+      foto = "ica.jpg";
+      txtFoto = "I Love You";
+      nomorWA = "085893387225";
+
+      stiker = "";
+
+// Yang mau tanpa wm, custom tampilan, bisa order web ucapan di Deka Tutorial (DM IG @deka_tutorial)
+// ======================================
+    </script>
+    <div class="content"></div>
+    <div class="panda">
+      <p>Pencet Love-nya</p>
+      <br /><img class="stiker" src="https://dekatutorial.github.io/17klikaku/SubsYT.gif" alt="" />
+      <div class="luv">
+        <i onclick="tampilModal()" class="material-icons-round"> favorite </i>
+      </div>
+    </div>
+
+    <div class="container-modal">
+      <div class="bg"></div>
+      <div class="lope"></div>
+      <div class="modal">
+        <div class="frame">
+          <img class="foto" src="" alt="" />
+            <p class="txtFrame"></p>
+        </div>
+        <div class="kirimPesan">
+          <a class="pesanwa" href="" target="_blank">Kirim Pesan</a><br><br>
+          <p><h5 class="p">Kirim tentang aku apapun di whatsapp yh..</h5></p>
+            <source media="(min-width: )" srcset="">
+            <img src="" alt="">
+        </div>
+      </div>
+    </div>
+    <script>
+      // Jangan hapus kode dibawah ini!
+      musik = new Audio(musik);
+      musik.loop = true;
+      musik.autoplay = true;
+      watermark("Youtube : Deka Tutorial");
+      ucapan();
+      buatLope();
+      makan();
+    </script>
+  </body>
+</html>
